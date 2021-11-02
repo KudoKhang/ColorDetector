@@ -41,7 +41,7 @@ def getBGR(x, y):
 def getColorName(b, g, r):
     minimum = 1000 
     for i in range(len(csv)):
-        d = abs(b - int(csv.loc[i, "B"])) + abs(g - int(csv.loc[i, "G"])) + abs(r - int(csv.loc[i, "R"])) # maximum = 255 + 255 + 255 = 765
+        d = abs(b - int(csv.loc[i, "B"])) + abs(g - int(csv.loc[i, "G"])) + abs(r - int(csv.loc[i, "R"])) # maximum = 255 + 255 + 255 = 765 (d = ||b-B|| + ||g-G|| + ||r-R||)
         if (d <= minimum):
             minimum = d
             cname = csv.loc[i, "color_name"]
